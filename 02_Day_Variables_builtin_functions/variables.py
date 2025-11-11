@@ -1,4 +1,4 @@
-
+'''
 # Variables in Python
 
 first_name = 'Asabeneh'
@@ -38,3 +38,17 @@ print('Last name: ', last_name)
 print('Country: ', country)
 print('Age: ', age)
 print('Married: ', is_married)
+'''
+
+f_name = input('Enter your name:')
+l_name = input('Enter your last name:')
+age = input('Enter your age:')
+skills = input('Enter your skills seperated by comma (,):')
+
+skill_set = [s.strip() for s in skills.split(',')]
+
+print(f'''Info: 
+    Full name: {f_name} {l_name}
+    {age} years old
+    and skilled in {skill_set} this is a {type(skill_set)}
+      ''')
