@@ -1,6 +1,6 @@
 # Arithmetic Operations in Python
 # Integers
-
+'''
 print('Addition: ', 1 + 2)
 print('Subtraction: ', 2 - 1)
 print('Multiplication: ', 2 * 3)
@@ -122,3 +122,87 @@ print(not True)      # False - Negation, the not operator turns true to false
 print(not False)     # True
 print(not not True)  # True
 print(not not False) # False
+
+'''
+
+# cal area of circle 
+'''
+radius = float(input('Enter radius: '))
+print(f'Area: {3.14 * (radius ** 2)}')
+'''
+# cal weight
+'''
+mass = float(input('Enter mass:'))
+print(f'Weight = {mass * 9.81}N')
+'''
+
+# print(3 > 2)
+# print(2>3)
+# print(len('ashmit')!=len('vidhita'))
+# print(True == False)
+# print(True != True)
+
+"""
+-----------------------EXERCISES------------------------------------
+
+"""
+
+# 4-6 concepts area and perimeter of triangle
+
+# height = float(input('Enter height of triangle:'))
+# base = float(input('Enter base of triangle:'))
+# side_a = float(input('Enter side of triangle:'))
+# side_b = float(input('Enter second side of triangle:'))
+
+# print(f'Area: {0.5 * height * base} and Perimeter: {side_a+ side_b+base}')
+
+# cal slope and distance between two points 
+# x1 = float(input('Enter x1 :'))
+# y1 = float(input('Enter y1 :'))
+# x2 = float(input('Enter x2 :'))
+# y2 = float(input('Enter y2 :'))
+# print(f'Slope m : {(y2-y1)/(x2-x1)} and distance: {((x2-x1)**2 + (y2-y1)**2)**0.5}')
+
+'''
+Calculate the value of y (y = x^2 + 6x + 9). 
+Try to use different x values and figure out at what x value y is going to be 0.
+
+'''
+# def f(x):
+#     return x**2 + 6*x +9
+
+# for x in [-5,-4,-3,-2,-1,0]:
+#     print(f'x: {x} and y: {f(x)}')
+#     if f(x) == 0:
+#         print('y is 0 here')
+#         break
+    
+'''
+Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+Use and operator to check if 'on' is found in both 'python' and 'dragon'
+I hope this course not is not full of jargon. Use in operator to check if jargon is not in the sentence.
+
+'''
+
+# print(f"Len of python: {len('python')} and Len of dragon: {len('dragon')}\n and are their len not same: {len('python')!=len('dragon')}")
+# print(f"{'on' in 'python' and 'on' in 'dragon' or 'jargon' not in 'I hope this course is not full of jargon'}")
+
+'''
+Write a Python script that displays the following table
+
+'''
+# for n in range(1,6):
+#     print(n, 1, n, n**2, n**3)
+
+'''
+Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+Check if type of '10' is equal to type of 10
+Check if int('9.8') is equal to 10 (wrong, will throw error, value is float)
+'''
+
+# print(f"{(7 // 3)==(int(2.7))}")
+# print(type('10')==type(10))
+# print(float(9.8)==10)
+
+
+
