@@ -1,4 +1,4 @@
-
+'''
 # Single line comment
 letter = 'P'                # A string could be a single character or a bunch of texts
 print(letter)               # P
@@ -9,10 +9,10 @@ print(len(greeting))        # 13
 sentence = "I hope you are enjoying 30 days of python challenge"
 print(sentence)
 
-# Multiline String
-multiline_string = '''I am a teacher and enjoy teaching.
-I didn't find anything as rewarding as empowering people.
-That is why I created 30 days of python.'''
+# # Multiline String
+# multiline_string = I am a teacher and enjoy teaching.
+# I didn't find anything as rewarding as empowering people.
+# That is why I created 30 days of python.
 print(multiline_string)
 # Another way of doing the same thing
 multiline_string = """I am a teacher and enjoy teaching.
@@ -246,3 +246,81 @@ challenge = 'thirty days of python'
 print(challenge.startswith('thirty')) # True
 challenge = '30 days of python'
 print(challenge.startswith('thirty')) # False
+
+'''
+
+# Day 4 practise and notes:
+
+# message = """
+# Hi my name is Ashmit and this is my practise branch of the
+# repo 30 days of python, where i can do and practise my stiff
+# lets go
+# """
+
+# print(message)
+
+'''
+String Concatenation: merging or connecting strings 
+
+first = input('Enter first name')
+last = input('Enter last name:')
+space = ' '
+print(f'Full name: {first + space + last}')
+
+'''
+
+# print("""
+# This is  MULTI LINE string.\nWe will also use line break\nas u can see we are.
+#       WE\tARE\tTHE\tWorld
+#       WW\tARE\tTHE\tChildren
+#       \'WE will rule\'
+
+# """)
+
+# lang = 'Python'
+# print(lang[(len(lang)-1)])
+
+# print(lang[len(lang)-6])
+
+# # python slicing
+
+# print(f'{lang[0:3]} and {lang[3:6]}')
+
+# print(f'{lang[-3:]==lang[3:]} which is {lang[-3:]}')
+
+# # reversing a STRING:
+
+# sent = input('Enter ANY WORD OR SENTENCE: ').capitalize()
+
+# print(f'Reveresed form: {sent[::-1]}')
+# print(sent[0:len(sent):2])
+# print(sent[::2]) #same as above, as if u leave a value empty, its gonna by default pick the zero index at first and the last index at last
+
+# print(sent.count('a'))
+# print(sent.endswith('tion'))
+
+# fruits = ['MANGO', 'APPLE', 'PEAR']
+# results = ' ✨ '.join(fruits)
+# print(results)
+
+'''
+Cut(slice) out the first word of Coding For All string.
+Check if Coding For All string contains a word Coding using the method index, find or other methods.
+Replace the word coding in the string 'Coding For All' to Python.
+"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+
+
+sent = 'Coding For All'
+print(sent.split()[0])
+print(sent.find('Coding'))
+new_sent = sent.replace('Coding', 'Python')
+print(new_sent)
+'''
+
+# names = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".strip()
+# names = names.split(',')
+# print(names)
+
+# Create an acronym or an abbreviation for the name 'Python For Everyone'.
+
+print(f'Acronym for the phrase: { ".".join(x[0].upper() for x in input('Enter a phrase: ').split())}')
