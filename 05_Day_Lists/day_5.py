@@ -1,179 +1,111 @@
-empty_list = list() # this is an empty list, no item in the list
-print(len(empty_list)) # 0
+# make a list
 
-fruits = ['banana', 'orange', 'mango', 'lemon']                     # list of fruits
-vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']      # list of vegetables
-animal_products = ['milk', 'meat', 'butter', 'yoghurt']             # list of animal products
-web_techs = ['HTML', 'CSS', 'JS', 'React','Redux', 'Node', 'MongDB'] # list of web technologies
-countries = ['Finland', 'Estonia', 'Denmark', 'Sweden', 'Norway']
+lst = list() #empty, using list() func
+print(len(lst) ) # 0
 
-# Print the lists and it length
-print('Fruits:', fruits)
-print('Number of fruits:', len(fruits))
-print('Vegetables:', vegetables)
-print('Number of vegetables:', len(vegetables))
-print('Animal products:',animal_products)
-print('Number of animal products:', len(animal_products))
-print('Web technologies:', web_techs)
-print('Number of web technologies:', len(web_techs))
-print('Number of countries:', len(countries))
+lst_1 = [] # empty list
+print(len(lst_1))
 
-# Modifying list
+# list with values
+random_list = [1, 'apple', 'HTML', True, '9', 'hello', {'name':'Ashmit', 'place': 'india'}] # various data types can be stored together
+print(f"List items: {random_list} and lenth: {len(random_list)}") # len to find out the number of items in a list
 
-fruits = ['banana', 'orange', 'mango', 'lemon'] 
-first_fruit = fruits[0] # we are accessing the first item using its index
-print(first_fruit)      # banana
-second_fruit = fruits[1]
-print(second_fruit)     # orange
-last_fruit = fruits[3]
-print(last_fruit) # lemon
-# Last index
-last_index = len(fruits) - 1
-last_fruit = fruits[last_index]
+# using index
 
-# Accessing items
-fruits = ['banana', 'orange', 'mango', 'lemon'] 
-last_fruit = fruits[-1]
-second_last = fruits[-2]
-print(last_fruit)       # lemon
-print(second_last)      # mango
+fruit = random_list[1] # return apple
+print(fruit)
 
-# Slicing items
-fruits = ['banana', 'orange', 'mango', 'lemon'] 
-all_fruits = fruits[0:4] # it returns all the fruits
-# this is also give the same result as the above
-all_fruits = fruits[0:] # if we don't set where to stop it takes all the rest
-orange_and_mango = fruits[1:3] # it does not include the end index
-orange_mango_lemon = fruits[1:]
+info = random_list[len(random_list)-1] 
+print(info)
+ # or 
+print(random_list[-2]) # hello 
 
-fruits = ['banana', 'orange', 'mango', 'lemon'] 
-all_fruits = fruits[-4:] # it returns all the fruits
-# this is also give the same result as the above
-orange_and_mango = fruits[-3:-1] # it does not include the end index
-orange_mango_lemon = fruits[-3:]
+#unpacking list
 
+countries = ['India', 'China', 'USA', 'Canada', 'France', 'Germany', 'Austria', 'Australia', 'New Zealand']
 
-fruits = ['banana', 'orange', 'mango', 'lemon'] 
-fruits[0] = 'Avocado' 
-print(fruits)       #  ['avocado', 'orange', 'mango', 'lemon']
-fruits[1] = 'apple'
-print(fruits)       #  ['avocado', 'apple', 'mango', 'lemon']
-last_index = len(fruits) - 1
-fruits[last_index] = 'lime'
-print(fruits)        #  ['avocado', 'apple', 'mango', 'lime']
+IN, CH, US, CA, *EU, AU, NZ = countries # very imp: in python we can only use * option ONE TIME on the left side, cant be used two stars
+ASIA = [IN, CH]
+AMERICAS = [US, CA]
+OCEANIA = [AU, NZ]
 
-# checking items
-fruits = ['banana', 'orange', 'mango', 'lemon']
-does_exist = 'banana' in fruits
-print(does_exist)  # True
-does_exist = 'lime' in fruits
-print(does_exist)  # False
+print(f"All: {countries} and Asian: {ASIA}, America, we got {AMERICAS} and in europe we have {EU}, and the last is down under {OCEANIA}")
 
-# Append
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.append('apple')
-print(fruits)           # ['banana', 'orange', 'mango', 'lemon', 'apple']
-fruits.append('lime')   # ['banana', 'orange', 'mango', 'lemon', 'apple', 'lime]
-print(fruits)
+# slicing 
 
-# insert
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.insert(2, 'apple') # insert apple between orange and mango
-print(fruits)           # ['banana', 'orange', 'apple', 'mango', 'lemon']
-fruits.insert(3, 'lime')   # ['banana', 'orange', 'apple', 'mango', 'lime','lemon',]
-print(fruits)
+print(countries[::2]) # first to last skipping one in between
+print(countries[::-2]) # last to front skipping one in between 
+print(countries[2::2]) # starts from index 2 to last skipping one in between
+print(countries[::-1]) # returns all from last 
 
-# remove
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.remove('banana')
-print(fruits)  # ['orange', 'mango', 'lemon']
-fruits.remove('lemon')
-print(fruits)  # ['orange', 'mango']
+# modifying a list
 
-# pop
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.pop()     
-print(fruits)       # ['banana', 'orange', 'mango']
+countries[1] = 'Japan'
+countries[3] = 'Mexico'
+print(countries)
 
-fruits.pop(0)     
-print(fruits)       # ['orange', 'mango'] 
+print(True if 'India' in countries else False) # check if a item xists in the list
+print('Spain' in countries) # will also return True or false
+print('Yes' if 'China' in countries else 'No') 
 
-# del 
-fruits = ['banana', 'orange', 'mango', 'lemon']
-del fruits[0]     
-print(fruits)       # ['orange', 'mango', 'lemon']
+# adding and inserting= append, insert
 
-del fruits[1]     
-print(fruits)       # ['orange', 'lemon']
-del fruits
-print(fruits)       # This should give: NameError: name 'fruits' is not defined
+countries.append('Russia')
+countries.insert(3, 'Egypt') # will insert at index 3
 
-# clear
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.clear()     
-print(fruits)       # []
+print(countries)
 
-# copying a lits
+# remove, pop, del, copy and clear
 
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits_copy = fruits.copy()     
-print(fruits_copy)       # ['banana', 'orange', 'mango', 'lemon']
+countries.remove('Japan') # remove needs us to mention a specific name of the value
+countries.pop() # pop removes an item by addressing the item by index, and if index not mentioned, it removes the last item automatically
+countries.pop(2) # index mentioned
+del countries[3:6] # del is used to delete the whole list or group of items by index, this will delete items between 3 and 6, so items at index 4 and 5 will only be deleted
+print(countries)
+# del countries # will delete the whole list
+# print(countries) # will throw an error as it does not exist anymore
 
-# join
-positive_numbers = [1, 2, 3,4,5]
-zero = [0]
-negative_numbers = [-5,-4,-3,-2,-1]
-integers = negative_numbers + zero + positive_numbers
-print(integers)
-fruits = ['banana', 'orange', 'mango', 'lemon']
-vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot'] 
-fruits_and_vegetables = fruits + vegetables
-print(fruits_and_vegetables )
+new_countries= countries.copy() # will copy a list
+print(new_countries)
 
-# join with extend
-num1 = [0, 1, 2, 3]
-num2= [4, 5,6]
-num1.extend(num2)
-print('Numbers:', num1)
-negative_numbers = [-5,-4,-3,-2,-1]
-positive_numbers = [1, 2, 3,4,5]
-zero = [0]
+countries.clear() # removes all the items but keeps the list
+print(countries) # will return an empty list
 
-negative_numbers.extend(zero)
-negative_numbers.extend(positive_numbers)
-print('Integers:', negative_numbers)
-fruits = ['banana', 'orange', 'mango', 'lemon']
-vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot'] 
-fruits.extend(vegetables)
-print('Fruits and vegetables:', fruits )
+countries.append('Argentina')
+countries.append('South Africa')
+countries.append('Brazil')
 
-# count
-fruits = ['banana', 'orange', 'mango', 'lemon']
-print(fruits.count('orange'))   # 1
-ages = [22, 19, 24, 25, 26, 24, 25, 24]
-print(ages.count(24))           # 3
+# joining lists : using + and extend
 
-# index
-fruits = ['banana', 'orange', 'mango', 'lemon']
-print(fruits.index('orange'))   # 1
-ages = [22, 19, 24, 25, 26, 24, 25, 24]
-print(ages.index(24)) 
-# Reverse
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.reverse()
-print(fruits)  
-ages = [22, 19, 24, 25, 26, 24, 25, 24]
-ages.reverse()
-print(ages) 
+countries_plus = new_countries + countries #using plus operator, u can combine as many as u want 
+print(countries_plus)
 
-# sort
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.sort()
-print(fruits) 
-fruits.sort(reverse=True)
-print(fruits)
-ages = [22, 19, 24, 25, 26, 24, 25, 24]
-ages.sort()
-print(ages) 
-ages.sort(reverse=True)
-print(ages) 
+countries.extend(new_countries) # using .extend(), this actually appends the items of a list at the end of another list
+print(countries)
+
+# count : counts the number  of times a specific item appears on the list
+
+age = [1,2,45,21,678,32,32,32,32,5,6,8,9]
+print(age.count(32)) # 4
+
+print(age.index(32))  # to find out the index of an item, in case of multiple entries of the same item, it will give index of the first apperance
+
+# reversing a list= reverse()
+
+countries.reverse()
+print(countries)
+
+# sort and sorted
+
+# sort arranges the list in asc or desc order, changes the original list
+
+countries.sort() # by default, it will return in asc
+print(countries)
+
+countries_plus.sort(reverse=True) # to arrange in desc
+print(countries_plus)
+
+# sorted: same functionality, but gives a new list arranged in asc or desc, and keeps the original one 
+
+age = sorted(age, reverse=True) #desc
+print(age)

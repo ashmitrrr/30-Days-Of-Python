@@ -323,4 +323,5 @@ print(new_sent)
 
 # Create an acronym or an abbreviation for the name 'Python For Everyone'.
 
-print(f'Acronym for the phrase: { ".".join(x[0].upper() for x in input('Enter a phrase: ').split())}')
+# letters = [x[0].upper() for x in input('Enter a phrase: ').split()]
+# print(f'Acronym for the phrase: { ".".join(letters)}')
